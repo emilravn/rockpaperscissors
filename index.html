@@ -1,0 +1,84 @@
+<script>
+  const rock = "Rock";
+  const paper = "Paper";
+  const scissors = "Scissors";
+  let possibleHands = [rock, paper, scissors];
+  let computerScore = 0;
+  let playerScore = 0;
+
+  function ComputerPick() {
+    let computerPick =
+      possibleHands[Math.floor(Math.random() * possibleHands.length)];
+    return computerPick;
+  }
+
+  function PlayerPick() {
+    let userInput = prompt("Rock, paper or scissors?");
+
+    switch (userInput.toLowerCase()) {
+      case "rock":
+        userInput = rock;
+        break;
+      case "paper":
+        userInput = paper;
+        break;
+      case "scissors":
+        userInput = scissors;
+        break;
+      default:
+        alert("Not a valid choice!");
+        userInput = PlayerPick();
+    }
+    return userInput;
+  }
+
+  function PlayRound(PlayerPick, ComputerPick) {
+    let lossAlert =
+      "You lose! " + PlayerPick + " is beaten by " + ComputerPick + ".";
+    if (ComputerPick === rock && PlayerPick === scissors) {
+      alert(lossAlert);
+      computerScore++;
+    } else if (ComputerPick === scissors && PlayerPick === paper) {
+      alert(lossAlert);
+      computerScore++;
+    } else if (ComputerPick === paper && PlayerPick === rock) {
+      alert(lossAlert);
+      computerScore++;
+    } else if (ComputerPick === PlayerPick) {
+      alert(
+        "That's a draw! Computer picked " +
+          ComputerPick +
+          " and you picked " +
+          PlayerPick +
+          "."
+      );
+    } else {
+      alert("You win! " + PlayerPick + " beats " + ComputerPick + ".");
+      playerScore++;
+    }
+  }
+
+  function Game() {
+    alert(
+      "Welcome to this game! Here you will play rock, paper, scissors against the computer for five rounds. Good luck!"
+    );
+    for (let i = 0; i < 5; i++) {
+      PlayRound(PlayerPick(), ComputerPick());
+      console.log(
+        `Player's Score: ${playerScore}, Computer's Score: ${computerScore}`
+      );
+    }
+
+    if ((i = 5)) {
+      if (playerScore > computerScore) {
+        console.log("You win the game!");
+      } else if (playerScore === computerScore) {
+        console.log("It's a tie!'");
+      } else {
+        console.log("The computer wins the game!");
+      }
+    }
+  }
+
+  Game();
+</script>
