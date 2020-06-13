@@ -32,18 +32,19 @@
     return userInput;
   }
 
-  function PlayRound(PlayerPick, ComputerPick) {
+  function lossAlert() {
     let lossAlert =
       "You lose! " + PlayerPick + " is beaten by " + ComputerPick + ".";
+    computerScore++;
+  }
+
+  function PlayRound(PlayerPick, ComputerPick) {
     if (ComputerPick === rock && PlayerPick === scissors) {
-      alert(lossAlert);
-      computerScore++;
+      lossAlert();
     } else if (ComputerPick === scissors && PlayerPick === paper) {
-      alert(lossAlert);
-      computerScore++;
+      lossAlert();
     } else if (ComputerPick === paper && PlayerPick === rock) {
-      alert(lossAlert);
-      computerScore++;
+      lossAlert();
     } else if (ComputerPick === PlayerPick) {
       alert(
         "That's a draw! Computer picked " +
@@ -69,7 +70,7 @@
       );
     }
 
-    if ((i = 5)) {
+    if ((i = 5 || playerScore === 3 || computerScore === 3)) {
       if (playerScore > computerScore) {
         console.log("You win the game!");
       } else if (playerScore === computerScore) {
