@@ -1,0 +1,28 @@
+body{
+    background-color:#BECBCE;
+    font-family: 'Roboto', serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+#btn{
+width: 120px;
+height: 60px;
+font-size:14px;
+background: #4697D1;
+color:white;
+border-style: hidden;
+border-radius: 6px;
+margin-right:20px;
+}
+
+#button:hover{
+    transform: scale(1.1);
+}
+
+.input{
+    text-align:center;
+    margin: auto;
+}

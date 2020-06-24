@@ -1,85 +1,32 @@
-<script>
-  const rock = "Rock";
-  const paper = "Paper";
-  const scissors = "Scissors";
-  let possibleHands = [rock, paper, scissors];
-  let computerScore = 0;
-  let playerScore = 0;
+<!DOCTYPE html>
+<html lang="en">
 
-  function ComputerPick() {
-    let computerPick =
-      possibleHands[Math.floor(Math.random() * possibleHands.length)];
-    return computerPick;
-  }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors by Ravn</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
 
-  function PlayerPick() {
-    let userInput = prompt("Rock, paper or scissors?");
+<body>
+  <div class="container">
+    <div class="scoreboard">
+      <div class="playerscore"></div>
+      <div class="computerscore"></div>
+    </div>
+    <div class="versus">
+      <h1>Here goes arena</h1>
+    </div>
+    <div class="input">
+      <button id="btn">Rock</button>
+      <button id="btn">Paper</button>
+      <button id="btn">Scissors</button>
+    </div>
+  </div>
 
-    switch (userInput.toLowerCase()) {
-      case "rock":
-        userInput = rock;
-        break;
-      case "paper":
-        userInput = paper;
-        break;
-      case "scissors":
-        userInput = scissors;
-        break;
-      default:
-        alert("Not a valid choice!");
-        userInput = PlayerPick();
-    }
-    return userInput;
-  }
+  <script type="text/javascript" src="script.js"></script>
+</body>
 
-  function lossAlert() {
-    let lossAlert =
-      "You lose! " + PlayerPick + " is beaten by " + ComputerPick + ".";
-    computerScore++;
-  }
-
-  function PlayRound(PlayerPick, ComputerPick) {
-    if (ComputerPick === rock && PlayerPick === scissors) {
-      lossAlert();
-    } else if (ComputerPick === scissors && PlayerPick === paper) {
-      lossAlert();
-    } else if (ComputerPick === paper && PlayerPick === rock) {
-      lossAlert();
-    } else if (ComputerPick === PlayerPick) {
-      alert(
-        "That's a draw! Computer picked " +
-          ComputerPick +
-          " and you picked " +
-          PlayerPick +
-          "."
-      );
-    } else {
-      alert("You win! " + PlayerPick + " beats " + ComputerPick + ".");
-      playerScore++;
-    }
-  }
-
-  function Game() {
-    alert(
-      "Welcome to this game! Here you will play rock, paper, scissors against the computer for five rounds. Good luck!"
-    );
-    for (let i = 0; i < 5; i++) {
-      PlayRound(PlayerPick(), ComputerPick());
-      console.log(
-        `Player's Score: ${playerScore}, Computer's Score: ${computerScore}`
-      );
-    }
-
-    if ((i = 5 || playerScore === 3 || computerScore === 3)) {
-      if (playerScore > computerScore) {
-        console.log("You win the game!");
-      } else if (playerScore === computerScore) {
-        console.log("It's a tie!'");
-      } else {
-        console.log("The computer wins the game!");
-      }
-    }
-  }
-
-  Game();
-</script>
+</html>
