@@ -28,8 +28,8 @@ function PlayerPick() {
 }
 
 function lossAlert() {
-    let lossAlert = `You lose! ${PlayerPick} is beaten by ${ComputerPick}.`;
     computerScore++;
+    return `You lose! ${PlayerPick} is beaten by ${ComputerPick}.`;
 }
 
 function PlayRound(PlayerPick, ComputerPick) {
