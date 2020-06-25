@@ -1,28 +1,57 @@
-body{
-    background-color:#BECBCE;
-    font-family: 'Roboto', serif;
+body {
+  background-color: #becbce;
+  font-family: "Roboto", serif;
 }
 
-* {
-    box-sizing: border-box;
-  }
-
-#btn{
-width: 120px;
-height: 60px;
-font-size:14px;
-background: #4697D1;
-color:white;
-border-style: hidden;
-border-radius: 6px;
-margin-right:20px;
+#container {
+  text-align: center;
+  margin: auto;
 }
 
-#button:hover{
-    transform: scale(1.1);
+#scoreboard {
 }
 
-.input{
-    text-align:center;
-    margin: auto;
+#playerscore {
+}
+
+#computerscore {
+}
+
+#versus {
+}
+
+#input {
+  margin-top: 50px;
+}
+
+#rockbtn,
+#paperbtn,
+#scissorsbtn {
+  width: 120px;
+  height: 60px;
+  font-size: 14px;
+  background: #4697d1;
+  color: white;
+  border-style: hidden;
+  border-radius: 6px;
+  margin-right: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  outline: 0;
+}
+
+#rockbtn:hover,
+#paperbtn:hover,
+#scissorsbtn:hover {
+  transform: scale(1.1);
+}
+
+#rockbtn:active,
+#paperbtn:active,
+#scissorsbtn:active {
+  opacity: 50%;
 }

@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors by Ravn</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors by Ravn</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-</head>
-
-<body>
-  <div class="container">
-    <h1>Main container</h1>
-    <div class="scoreboard">
-      <h2>Here goes scoreboard container</h2>
-      <div class="playerscore">
-        <h3>here goes player score container</h3>
+  <body>
+    <div id="container">
+      <h1>Main container</h1>
+      <div id="scoreboard">
+        <h2>Here goes scoreboard container</h2>
+        <div id="playerscore">
+          <h3>Here goes player score container</h3>
+        </div>
+        <div id="computerscore">
+          <h3>Here goes computer score container</h3>
+        </div>
       </div>
-      <div class="computerscore"><h3>Here goes computer score container</h3></div>
+      <div id="versus">
+        <h1>Here goes arena where the two fists will be fighting</h1>
+      </div>
+      <div id="input">
+        <button id="rockbtn">Rock</button>
+        <button id="paperbtn">Paper</button>
+        <button id="scissorsbtn">Scissors</button>
+      </div>
     </div>
-    <div class="versus">
-      <h1>Here goes arena where the two fists will be fighting</h1>
-    </div>
-    <div class="input">
-      <button id="btn">Rock</button>
-      <button id="btn">Paper</button>
-      <button id="btn">Scissors</button>
-    </div>
-  </div>
 
-  <script type="text/javascript" src="script.js"></script>
-</body>
-
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

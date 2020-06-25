@@ -58,3 +58,13 @@ function Game() {
         );
     }
 }
+
+// For the UI
+
+const rockBtn = document.querySelector("#rockbtn");
+
+
+const paperBtn = document.querySelector("#paperbtn");
+
+
+const scissorsBtn = document.querySelector("#scissorsbtn");
