@@ -63,7 +63,7 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   outline: 0;
-  margin: 50px 20px 0px 0px;
+  margin: 50px 0px 0px 0px;
 }
 
 #rockbtn:hover,
@@ -94,7 +94,7 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   outline: 0;
-  margin: 40px 20px 40px 0px;
+  margin: 40px 0px 40px 0px;
 }
 
 .whoweplayingagainst {
