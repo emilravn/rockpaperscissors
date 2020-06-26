@@ -5,27 +5,33 @@ body {
 
 #container {
   text-align: center;
-  margin-top:100px;
+  margin-top: 100px;
 }
 
-#scoreboard {
-  margin-top:50px;
+#scoreboard, #runningscore {
+  margin: 50px 0px;
+  font-size: 24px;
+  font-weight:normal;
 }
 
 #playerscore {
-  display:inline-block;
-  margin-right:40px;
-  font-size:30px;
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: 5px solid;
 }
 
 #computerscore {
-  display:inline-block;
-  margin-left:40px;
-  font-size:30px;
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 30px;
+  padding: 10px 20px;
+  border: 5px solid;
 }
 
 #versus {
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 #input {
@@ -50,7 +56,7 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   outline: 0;
-  margin-top:50px;
+  margin-top: 50px;
 }
 
 #rockbtn:hover,
@@ -63,4 +69,9 @@ body {
 #paperbtn:active,
 #scissorsbtn:active {
   opacity: 50%;
+}
+
+#reset{
+  background-color:red;
+  margin-top:50px;
 }

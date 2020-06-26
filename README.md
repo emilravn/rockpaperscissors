@@ -1,5 +1,9 @@
-4. Display the running score, and announce a winner of the game once one player reaches 5 points.
+1. Don’t forget to go back and add your new version to the original Rock Paper Scissors Project!
 
-5. You will likely have to refactor (rework/rewrite) your original code to make it work for this. That’s OK! Reworking old code is an important part of the programmer’s life.
-
-6. Don’t forget to go back and add your new version to the original Rock Paper Scissors Project!
+TODO:
+- Indication of which score belong to who.
+- Stop the game form running once a winner has been found.
+- Add drawings of a hand, paper and scissor. Show the pictures animated with CSS in the middle.
+- Make the reset button look nice.
+- Scale the application to tablets and phones.
+- Make fancier UI.
