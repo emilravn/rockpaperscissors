@@ -66,6 +66,10 @@ body {
   margin: 50px 0px 0px 0px;
 }
 
+#paperbtn {
+  margin: 10px;
+}
+
 #rockbtn:hover,
 #paperbtn:hover,
 #scissorsbtn:hover,

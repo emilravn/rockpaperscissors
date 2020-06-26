@@ -8,7 +8,6 @@ let computerChoice = ComputerPick();
 const rockBtn = document.querySelector("#rockbtn");
 const paperBtn = document.querySelector("#paperbtn");
 const scissorsBtn = document.querySelector("#scissorsbtn");
-const input = document.getElementById("#input");
 
 // Rock Pick
 rockBtn.addEventListener("click", () => {
@@ -34,12 +33,12 @@ const updateScore = () => {
       document.getElementById(
         "scoreboard"
       ).textContent = `You win the game! ${playerChoice} beats ${computerChoice}.`;
-      RemoveOptions()
+      RemoveOptions();
     } else {
       document.getElementById(
         "scoreboard"
       ).textContent = `The computer wins the game! ${playerChoice} is beaten by ${computerChoice}.`;
-      RemoveOptions()
+      RemoveOptions();
     }
   }
   document.getElementById("ps").textContent = playerScore;
@@ -95,13 +94,13 @@ resetGame.addEventListener("click", () => {
   AddOptions();
 });
 
-function RemoveOptions(){
-  rockBtn.remove();
-  paperBtn.remove();
-  scissorsBtn.remove();
+function RemoveOptions() {
+  document.getElementById("input").removeChild(rockBtn);
+  document.getElementById("input").removeChild(paperBtn);
+  document.getElementById("input").removeChild(scissorsBtn);
 }
 
-function AddOptions(){
+function AddOptions() {
   document.getElementById("input").appendChild(rockBtn);
   document.getElementById("input").appendChild(paperBtn);
   document.getElementById("input").appendChild(scissorsBtn);
