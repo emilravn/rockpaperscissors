@@ -9,12 +9,15 @@ body {
 }
 
 #scoreboard {
+  display:inline-block;
 }
 
 #playerscore {
+  width: 80px; float:left; height:60px; background:gray;
 }
 
 #computerscore {
+  width: 80px; float:right; height:60px; background:yellow;
 }
 
 #versus {

@@ -1,7 +1,42 @@
+// Variables for selection
 let choice = ["Rock", "Paper", "Scissors"];
 let computerScore = 0;
 let playerScore = 0;
-let playerChoice;
+
+// Constants for the player options
+const rockBtn = document.querySelector("#rockbtn");
+const paperBtn = document.querySelector("#paperbtn");
+const scissorsBtn = document.querySelector("#scissorsbtn");
+
+// Rock Pick
+rockBtn.addEventListener("click", () => {
+  playerChoice = choice[0];
+  Versus();
+});
+
+// Paper Pick
+paperBtn.addEventListener("click", () => {
+  playerChoice = choice[1];
+  Versus();
+});
+
+// Scissors Pick
+scissorsBtn.addEventListener("click", () => {
+  playerChoice = choice[2];
+  Versus();
+});
+
+const updateScore = () => {
+  document.getElementById('ps').textContent = computerScore;
+  document.getElementById('cs').textContent = playerScore;
+};
+
+
+function Versus(){
+  ComputerPick();
+  PlayRound(playerChoice, ComputerPick());
+  updateScore();
+}
 
 function ComputerPick() {
   let computerPick = choice[Math.floor(Math.random() * 3)];
@@ -9,8 +44,8 @@ function ComputerPick() {
 }
 
 function lossAlert() {
+  alert(`You lose! ${playerChoice} is beaten by ${ComputerPick}.`);
   computerScore++;
-  alert("You lost!");
 }
 
 function PlayRound(playerChoice, ComputerPick) {
@@ -29,27 +64,3 @@ function PlayRound(playerChoice, ComputerPick) {
     playerScore++;
   }
 }
-
-
-// Constants for the player options
-const rockBtn = document.querySelector("#rockbtn");
-const paperBtn = document.querySelector("#paperbtn");
-const scissorsBtn = document.querySelector("#scissorsbtn");
-
-rockBtn.addEventListener('click', () => {
-  playerChoice = choice[0];
-  ComputerPick();
-  PlayRound(playerChoice, ComputerPick());
-});
-
-paperBtn.addEventListener('click', () => {
-  playerChoice = choice[1];
-  ComputerPick();
-  PlayRound(playerChoice, ComputerPick());
-});
-
-scissorsBtn.addEventListener('click', () => {
-  playerChoice = choice[2];
-  ComputerPick();
-  PlayRound(playerChoice, ComputerPick());
-});
