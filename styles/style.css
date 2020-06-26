@@ -5,11 +5,12 @@ body {
 
 #container {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
+  font-size:32px;
 }
 
 #scoreboard, #runningscore {
-  margin: 50px 0px;
+  margin: 70px 0px;
   font-size: 24px;
   font-weight:normal;
 }
@@ -19,7 +20,9 @@ body {
   margin-right: 40px;
   font-size: 30px;
   padding: 10px 20px;
-  border: 5px solid;
+  border: 2px solid green;
+  margin-top:30px;
+  border-radius:5px;
 }
 
 #computerscore {
@@ -27,7 +30,9 @@ body {
   margin-left: 40px;
   font-size: 30px;
   padding: 10px 20px;
-  border: 5px solid;
+  border: 2px solid red;
+  margin-top:30px;
+  border-radius:5px;
 }
 
 #versus {
@@ -73,5 +78,19 @@ body {
 
 #reset{
   background-color:red;
-  margin-top:50px;
+  margin-top:100px;
+  width: 120px;
+  height: 60px;
+  font-size: 14px;
+  color: white;
+  border-style: hidden;
+  border-radius: 6px;
+  margin-right: 20px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  outline: 0;
 }

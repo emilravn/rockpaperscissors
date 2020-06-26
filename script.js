@@ -2,6 +2,7 @@
 let choice = ["Rock", "Paper", "Scissors"];
 let computerScore = 0;
 let playerScore = 0;
+let computerChoice = ComputerPick();
 
 // Constants for the player options
 const rockBtn = document.querySelector("#rockbtn");
@@ -27,15 +28,20 @@ scissorsBtn.addEventListener("click", () => {
 });
 
 const updateScore = () => {
+  if (playerScore === 3 || computerScore === 3) {
+    if (playerScore > computerScore) {
+      document.getElementById(
+        "scoreboard"
+      ).textContent = `You win the game! ${playerChoice} beats ${computerChoice}.`;
+    } else {
+      document.getElementById(
+        "scoreboard"
+      ).textContent = `The computer wins the game! ${playerChoice} is beaten by ${computerChoice}.`;
+    }
+  }
   document.getElementById("ps").textContent = playerScore;
   document.getElementById("cs").textContent = computerScore;
 };
-
-function Versus() {
-  PlayRound(playerChoice);
-  updateScore();
-  DetermineWinner();
-}
 
 function ComputerPick() {
   let computerPick = choice[Math.floor(Math.random() * 3)];
@@ -45,8 +51,13 @@ function ComputerPick() {
 function lossAlert() {
   document.getElementById(
     "scoreboard"
-  ).textContent = `You lose! ${playerChoice} is beaten by ${ComputerPick()}.`;
+  ).textContent = `You lose! ${playerChoice} is beaten by ${computerChoice}.`;
   computerScore++;
+}
+
+function Versus() {
+  PlayRound(playerChoice);
+  updateScore();
 }
 
 function PlayRound(playerChoice) {
@@ -69,25 +80,9 @@ function PlayRound(playerChoice) {
   }
 }
 
-function DetermineWinner() {
-  if (playerScore === 3 || computerScore === 3) {
-    if (playerScore > computerScore) {
-      document.getElementById("scoreboard").textContent = "You win the game!";
-      ResetGame();
-    } else if (playerScore === computerScore) {
-      document.getElementById("scoreboard").textContent = "It's a tie!";
-      ResetGame();
-    } else {
-      document.getElementById("scoreboard").textContent =
-        "The computer wins the game!";
-      ResetGame();
-    }
-  }
-}
-
 const resetGame = document.querySelector("#reset");
 
-resetGame.addEventListener('click', () => {
+resetGame.addEventListener("click", () => {
   document.getElementById("ps").innerHTML = "0";
   document.getElementById("cs").innerHTML = "0";
   document.getElementById("scoreboard").innerHTML =
