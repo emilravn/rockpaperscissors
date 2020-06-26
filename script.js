@@ -27,10 +27,9 @@ scissorsBtn.addEventListener("click", () => {
 });
 
 const updateScore = () => {
-  document.getElementById('ps').textContent = computerScore;
-  document.getElementById('cs').textContent = playerScore;
+  document.getElementById('ps').textContent = playerScore;
+  document.getElementById('cs').textContent = computerScore;
 };
-
 
 function Versus(){
   PlayRound(playerChoice);
@@ -43,7 +42,7 @@ function ComputerPick() {
 }
 
 function lossAlert() {
-  alert(`You lose! ${playerChoice} is beaten by ${ComputerPick()}.`);
+  document.getElementById('scoreboard').textContent = `You lose! ${playerChoice} is beaten by ${ComputerPick()}.`
   computerScore++;
 }
 
@@ -56,11 +55,10 @@ function PlayRound(playerChoice) {
   } else if (computerChoice === choice[1] && playerChoice === choice[0]) {
     lossAlert();
   } else if (computerChoice === playerChoice) {
-    alert(
-      `That's a draw! Computer picked ${computerChoice} and you picked ${playerChoice}.`
-    );
+    document.getElementById('scoreboard').textContent = `That's a draw! Computer picked ${computerChoice} and you picked ${playerChoice}.`
+    ;
   } else {
-    alert("You win! " + playerChoice + " beats " + computerChoice + ".");
+    document.getElementById('scoreboard').textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
     playerScore++;
   }
 }

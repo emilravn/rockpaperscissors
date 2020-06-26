@@ -5,26 +5,27 @@ body {
 
 #container {
   text-align: center;
-  margin: auto;
+  margin-top:100px;
 }
 
 #scoreboard {
-  display:inline-block;
+  margin-top:50px;
 }
 
 #playerscore {
-  width: 80px; float:left; height:60px; background:gray;
+  display:inline-block;
+  margin-right:40px;
+  font-size:30px;
 }
 
 #computerscore {
-  width: 80px; float:right; height:60px; background:yellow;
-}
-
-#computerscoretext {
-  float:right;
+  display:inline-block;
+  margin-left:40px;
+  font-size:30px;
 }
 
 #versus {
+  margin-top:50px;
 }
 
 #input {
@@ -49,6 +50,7 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   outline: 0;
+  margin-top:50px;
 }
 
 #rockbtn:hover,
