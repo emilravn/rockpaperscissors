@@ -1,0 +1,110 @@
+body {
+  background-color: #becbce;
+  font-family: "Roboto", serif;
+}
+
+#container {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 32px;
+}
+
+#scoreboard,
+#runningscore {
+  margin: 70px 0px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+#playerscore {
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px;
+  border: 2px solid green;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+#computerscore {
+  display: inline-block;
+  margin:30px 0px 0px 100px;
+  font-size: 30px;
+  padding: 10px 15px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+#versus {
+  margin-top: 50px;
+}
+
+#input {
+  margin-top: 50px;
+}
+
+#rockbtn,
+#paperbtn,
+#scissorsbtn {
+  width: 120px;
+  height: 60px;
+  font-size: 14px;
+  background: #4697d1;
+  color: white;
+  border-style: hidden;
+  border-radius: 6px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  outline: 0;
+  margin: 50px 20px 0px 0px;
+}
+
+#rockbtn:hover,
+#paperbtn:hover,
+#scissorsbtn:hover {
+  transform: scale(1.1);
+}
+
+#rockbtn:active,
+#paperbtn:active,
+#scissorsbtn:active {
+  opacity: 50%;
+}
+
+#reset {
+  background-color: red;
+  width: 120px;
+  height: 60px;
+  font-size: 14px;
+  color: white;
+  border-style: hidden;
+  border-radius: 6px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  outline: 0;
+  margin: 100px 20px 40px 0px;
+}
+
+.whoweplayingagainst {
+  font-size: 10px;
+  margin: 5px 0px 0px 500px;
+  color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+  .whoweplayingagainst {
+    color: red;
+    margin: 10px 0px 0px 0px;
+  }
+  #container {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
