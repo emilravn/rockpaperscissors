@@ -1,8 +1,12 @@
 body {
-  background: rgb(93,106,158);
-  background: radial-gradient(circle, rgba(93,106,158,1) 0%, rgba(39,29,41,1) 100%);
+  background: rgb(93, 106, 158);
+  background: radial-gradient(
+    circle,
+    rgba(93, 106, 158, 1) 0%,
+    rgba(39, 29, 41, 1) 100%
+  );
   font-family: "Roboto", serif;
-  color:white;
+  color: white;
 }
 
 #container {
@@ -105,7 +109,7 @@ body {
   .whoweplayingagainst {
     color: red;
     margin: 10px 0px 0px 0px;
-    font-size:16px;
+    font-size: 16px;
   }
   #container {
     margin-top: 20px;
@@ -116,4 +120,9 @@ body {
     font-size: 16px;
     font-weight: normal;
   }
+}
+
+.scorestyle {
+  font-size: 12px;
+  padding-bottom: 10px;
 }
