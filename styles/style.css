@@ -27,7 +27,7 @@ body {
 
 #computerscore {
   display: inline-block;
-  margin:30px 0px 0px 100px;
+  margin: 30px 0px 0px 100px;
   font-size: 30px;
   padding: 10px 15px;
   border: 2px solid red;
@@ -64,7 +64,8 @@ body {
 
 #rockbtn:hover,
 #paperbtn:hover,
-#scissorsbtn:hover {
+#scissorsbtn:hover,
+#reset:hover {
   transform: scale(1.1);
 }
 
@@ -106,5 +107,10 @@ body {
   #container {
     margin-top: 20px;
     font-size: 20px;
+  }
+  #scoreboard,
+  #runningscore {
+    font-size: 16px;
+    font-weight: normal;
   }
 }
