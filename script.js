@@ -89,7 +89,7 @@ resetGame.addEventListener("click", () => {
   document.getElementById("ps").innerHTML = "0";
   document.getElementById("cs").innerHTML = "0";
   document.getElementById("scoreboard").innerHTML =
-    "New round! Choose your pick!";
+    "New game! Choose your pick!";
   playerScore = 0;
   computerScore = 0;
   AddOptions();
