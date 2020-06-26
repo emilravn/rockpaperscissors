@@ -6,13 +6,14 @@ body {
 #container {
   text-align: center;
   margin-top: 200px;
-  font-size:32px;
+  font-size: 32px;
 }
 
-#scoreboard, #runningscore {
+#scoreboard,
+#runningscore {
   margin: 70px 0px;
   font-size: 24px;
-  font-weight:normal;
+  font-weight: normal;
 }
 
 #playerscore {
@@ -21,8 +22,8 @@ body {
   font-size: 30px;
   padding: 10px 20px;
   border: 2px solid green;
-  margin-top:30px;
-  border-radius:5px;
+  margin-top: 30px;
+  border-radius: 5px;
 }
 
 #computerscore {
@@ -31,8 +32,8 @@ body {
   font-size: 30px;
   padding: 10px 20px;
   border: 2px solid red;
-  margin-top:30px;
-  border-radius:5px;
+  margin-top: 30px;
+  border-radius: 5px;
 }
 
 #versus {
@@ -76,9 +77,9 @@ body {
   opacity: 50%;
 }
 
-#reset{
-  background-color:red;
-  margin-top:100px;
+#reset {
+  background-color: red;
+  margin-top: 100px;
   width: 120px;
   height: 60px;
   font-size: 14px;
@@ -93,4 +94,23 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   outline: 0;
+}
+
+.whoweplayingagainst {
+  font-size: 10px;
+  margin-left: 500px;
+  margin-top: 5px;
+  color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+  .whoweplayingagainst {
+    color: red;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  #container {
+    margin-top: 20px;
+    font-size: 20px;
+  }
 }
