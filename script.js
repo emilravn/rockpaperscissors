@@ -1,70 +1,55 @@
 let choice = ["Rock", "Paper", "Scissors"];
 let computerScore = 0;
 let playerScore = 0;
+let playerChoice;
 
 function ComputerPick() {
-    let computerPick = choice[Math.floor(Math.random() * choice.length)];
-    return computerPick;
-}
-
-function PlayerPick() {
-    let userInput = prompt("Rock, paper or scissors?");
-
-    switch (userInput.toLowerCase()) {
-        case "rock":
-            userInput = choice[0];
-            break;
-        case "paper":
-            userInput = choice[1];
-            break;
-        case "scissors":
-            userInput = choice[2];
-            break;
-        default:
-            alert("Not a valid choice!");
-            userInput = PlayerPick();
-    }
-    return userInput;
+  let computerPick = choice[Math.floor(Math.random() * 3)];
+  return computerPick;
 }
 
 function lossAlert() {
-    computerScore++;
-    return `You lose! ${PlayerPick} is beaten by ${ComputerPick}.`;
+  computerScore++;
+  alert("You lost!");
 }
 
-function PlayRound(PlayerPick, ComputerPick) {
-    if (ComputerPick === choice[0] && PlayerPick === choice[2]) {
-        lossAlert();
-    } else if (ComputerPick === choice[2] && PlayerPick === choice[1]) {
-        lossAlert();
-    } else if (ComputerPick === choice[1] && PlayerPick === choice[0]) {
-        lossAlert();
-    } else if (ComputerPick === PlayerPick) {
-        alert(
-            `That's a draw! Computer picked ${ComputerPick} and you picked ${PlayerPick}.`
-        );
-    } else {
-        alert("You win! " + PlayerPick + " beats " + ComputerPick + ".");
-        playerScore++;
-    }
-}
-
-function Game() {
-    alert("Welcome to this game! Here you will play rock, paper, scissors against the computer for five rounds. Good luck!"
+function PlayRound(playerChoice, ComputerPick) {
+  if (ComputerPick === choice[0] && playerChoice === choice[2]) {
+    lossAlert();
+  } else if (ComputerPick === choice[2] && playerChoice === choice[1]) {
+    lossAlert();
+  } else if (ComputerPick === choice[1] && playerChoice === choice[0]) {
+    lossAlert();
+  } else if (ComputerPick === playerChoice) {
+    alert(
+      `That's a draw! Computer picked ${ComputerPick} and you picked ${playerChoice}.`
     );
-    for (let i = 0; i < 5; i++) {
-        PlayRound(PlayerPick(), ComputerPick());
-        console.log(`Player's Score: ${playerScore}, Computer's Score: ${computerScore}`
-        );
-    }
+  } else {
+    alert("You win! " + playerChoice + " beats " + ComputerPick + ".");
+    playerScore++;
+  }
 }
 
-// For the UI
 
+// Constants for the player options
 const rockBtn = document.querySelector("#rockbtn");
-
-
 const paperBtn = document.querySelector("#paperbtn");
-
-
 const scissorsBtn = document.querySelector("#scissorsbtn");
+
+rockBtn.addEventListener('click', () => {
+  playerChoice = choice[0];
+  ComputerPick();
+  PlayRound(playerChoice, ComputerPick());
+});
+
+paperBtn.addEventListener('click', () => {
+  playerChoice = choice[1];
+  ComputerPick();
+  PlayRound(playerChoice, ComputerPick());
+});
+
+scissorsBtn.addEventListener('click', () => {
+  playerChoice = choice[2];
+  ComputerPick();
+  PlayRound(playerChoice, ComputerPick());
+});
