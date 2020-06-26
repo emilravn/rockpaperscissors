@@ -20,6 +20,10 @@ body {
   width: 80px; float:right; height:60px; background:yellow;
 }
 
+#computerscoretext {
+  float:right;
+}
+
 #versus {
 }
 

@@ -33,8 +33,7 @@ const updateScore = () => {
 
 
 function Versus(){
-  ComputerPick();
-  PlayRound(playerChoice, ComputerPick());
+  PlayRound(playerChoice);
   updateScore();
 }
 
@@ -44,23 +43,24 @@ function ComputerPick() {
 }
 
 function lossAlert() {
-  alert(`You lose! ${playerChoice} is beaten by ${ComputerPick}.`);
+  alert(`You lose! ${playerChoice} is beaten by ${ComputerPick()}.`);
   computerScore++;
 }
 
-function PlayRound(playerChoice, ComputerPick) {
-  if (ComputerPick === choice[0] && playerChoice === choice[2]) {
+function PlayRound(playerChoice) {
+  let computerChoice = ComputerPick();
+  if (computerChoice === choice[0] && playerChoice === choice[2]) {
     lossAlert();
-  } else if (ComputerPick === choice[2] && playerChoice === choice[1]) {
+  } else if (computerChoice === choice[2] && playerChoice === choice[1]) {
     lossAlert();
-  } else if (ComputerPick === choice[1] && playerChoice === choice[0]) {
+  } else if (computerChoice === choice[1] && playerChoice === choice[0]) {
     lossAlert();
-  } else if (ComputerPick === playerChoice) {
+  } else if (computerChoice === playerChoice) {
     alert(
-      `That's a draw! Computer picked ${ComputerPick} and you picked ${playerChoice}.`
+      `That's a draw! Computer picked ${computerChoice} and you picked ${playerChoice}.`
     );
   } else {
-    alert("You win! " + playerChoice + " beats " + ComputerPick + ".");
+    alert("You win! " + playerChoice + " beats " + computerChoice + ".");
     playerScore++;
   }
 }
