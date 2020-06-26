@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors by Ravn</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link
@@ -13,9 +13,6 @@
   </head>
 
   <body>
-    <div id="navbar">
-      <a href="https://github.com/emilravn/rockpaperscissors"></a>
-    </div>
     <div id="container">
       <h1>Rock Paper Scissors</h1>
       <p class="whoweplayingagainst">... Against the CPU.</p>
@@ -23,9 +20,11 @@
         <h3 id="runningscore">Choose a selection to begin the game!</h3>
       </div>
       <div id="playerscore">
+        <p style="font-size:12px; padding-bottom:10px;">Player Score</p>
         <h3 id="ps">0</h3>
       </div>
       <div id="computerscore">
+        <p style="font-size:12px; padding-bottom:10px;">CPU Score</p>
         <h3 id="cs">0</h3>
       </div>
       <div id="input">
@@ -35,7 +34,6 @@
       </div>
       <button id="reset">RESET</button>
     </div>
-
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
