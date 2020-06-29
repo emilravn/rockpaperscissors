@@ -63,7 +63,6 @@ function Versus() {
 }
 
 function PlayRound(playerChoice) {
-  let computerChoice = ComputerPick();
   if (computerChoice === choice[0] && playerChoice === choice[2]) {
     lossAlert();
   } else if (computerChoice === choice[2] && playerChoice === choice[1]) {
