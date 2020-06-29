@@ -2,7 +2,6 @@
 let choice = ["Rock", "Paper", "Scissors"];
 let computerScore = 0;
 let playerScore = 0;
-let computerChoice = ComputerPick();
 
 // bUttons for the player options
 const rockBtn = document.querySelector("#rockbtn");
@@ -37,12 +36,12 @@ const updateScore = () => {
     if (playerScore > computerScore) {
       document.getElementById(
         "scoreboard"
-      ).textContent = `You win the game! ${playerChoice} beats ${computerChoice}.`;
+      ).textContent = `You win the game! ${playerChoice} beats ${ComputerPick()}.`;
       RemoveOptions();
     } else {
       document.getElementById(
         "scoreboard"
-      ).textContent = `The computer wins the game! ${playerChoice} is beaten by ${computerChoice}.`;
+      ).textContent = `The computer wins the game! ${playerChoice} is beaten by ${ComputerPick()}.`;
       RemoveOptions();
     }
   }
@@ -57,7 +56,7 @@ function ComputerPick() {
 function lossAlert() {
   document.getElementById(
     "scoreboard"
-  ).textContent = `You lose! ${playerChoice} is beaten by ${computerChoice}.`;
+  ).textContent = `You lose! ${playerChoice} is beaten by ${ComputerPick()}.`;
   computerScore++;
 }
 
@@ -67,6 +66,7 @@ function Versus() {
 }
 
 function PlayRound(playerChoice) {
+  let computerChoice = ComputerPick();
   if (computerChoice === choice[0] && playerChoice === choice[2]) {
     lossAlert();
   } else if (computerChoice === choice[1] && playerChoice === choice[0]) {
