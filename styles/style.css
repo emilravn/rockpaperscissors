@@ -73,32 +73,11 @@ body {
 #rockbtn:hover,
 #paperbtn:hover,
 #scissorsbtn:hover,
-#reset:hover {
-  transform: scale(1.1);
-}
 
 #rockbtn:active,
 #paperbtn:active,
 #scissorsbtn:active {
   opacity: 50%;
-}
-
-#reset {
-  background-color: red;
-  width: 120px;
-  height: 60px;
-  font-size: 14px;
-  color: white;
-  border-style: hidden;
-  border-radius: 6px;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  outline: 0;
-  margin: 40px 0px 40px 0px;
 }
 
 .whoweplayingagainst {

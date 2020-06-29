@@ -4,10 +4,15 @@ let computerScore = 0;
 let playerScore = 0;
 let computerChoice = ComputerPick();
 
-// Constants for the player options
+// bUttons for the player options
 const rockBtn = document.querySelector("#rockbtn");
 const paperBtn = document.querySelector("#paperbtn");
 const scissorsBtn = document.querySelector("#scissorsbtn");
+
+// Reset button
+const resetBtn = document.createElement("button");
+resetBtn.innerHTML = "Reset";
+resetBtn.setAttribute("style", "background-color: red; width:120px; height: 60px; font-size: 14px; color: white; border-style: hidden; border-radius: 6px; text-decoration: none; overflow: hidden; cursor: pointer; text-align: center; -transition-duration: 0.4s; outline: 0; margin: 40px 0px; resetBtn:hover");
 
 // Rock Pick
 rockBtn.addEventListener("click", () => {
@@ -46,8 +51,7 @@ const updateScore = () => {
 };
 
 function ComputerPick() {
-  let computerPick = choice[Math.floor(Math.random() * 3)];
-  return computerPick;
+  return choice[Math.floor(Math.random() * 3)];
 }
 
 function lossAlert() {
@@ -82,9 +86,9 @@ function PlayRound(playerChoice) {
   }
 }
 
-const resetGame = document.querySelector("#reset");
+const resetGame = document.querySelector("resetContainer");
 
-resetGame.addEventListener("click", () => {
+resetBtn.addEventListener("click", () => {
   document.getElementById("ps").innerHTML = "0";
   document.getElementById("cs").innerHTML = "0";
   document.getElementById("scoreboard").innerHTML =
@@ -98,10 +102,12 @@ function RemoveOptions() {
   document.getElementById("input").removeChild(rockBtn);
   document.getElementById("input").removeChild(paperBtn);
   document.getElementById("input").removeChild(scissorsBtn);
+  document.getElementById("resetContainer").appendChild(resetBtn);
 }
 
 function AddOptions() {
   document.getElementById("input").appendChild(rockBtn);
   document.getElementById("input").appendChild(paperBtn);
   document.getElementById("input").appendChild(scissorsBtn);
+  document.getElementById("resetContainer").removeChild(resetBtn);
 }
