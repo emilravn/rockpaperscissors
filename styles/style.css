@@ -73,7 +73,9 @@ body {
 
 #rockbtn:hover,
 #paperbtn:hover,
-#scissorsbtn:hover,
+#scissorsbtn:hover,{
+  
+}
 
 #rockbtn:active,
 #paperbtn:active,
