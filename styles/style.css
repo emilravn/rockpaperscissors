@@ -68,7 +68,7 @@ body {
 }
 
 #paperbtn {
-  margin: 10px;
+  margin: 0px 10px;
 }
 
 #rockbtn:hover,
@@ -95,15 +95,22 @@ body {
     margin: 10px 0px 0px 0px;
     font-size: 16px;
   }
+
   #container {
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 100px;
+    font-size: 18px;
   }
   #scoreboard,
   #runningscore {
     font-size: 16px;
     font-weight: normal;
   }
+
+  #paperbtn, #rockbtn, #scissorsbtn{
+    width:100px;
+    height:60px;
+  }
+  
 }
 
 .scorestyle {

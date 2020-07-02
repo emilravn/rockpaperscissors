@@ -41,7 +41,7 @@ const updateScore = () => {
     } else {
       document.getElementById(
         "scoreboard"
-      ).textContent = `The computer wins the game! ${playerChoice} is beaten by ${computerChoice}.`;
+      ).textContent = `The CPU wins the game! ${playerChoice} is beaten by ${computerChoice}.`;
       RemoveOptions();
     }
   }
@@ -56,7 +56,7 @@ function ComputerPick() {
 function lossAlert() {
   document.getElementById(
     "scoreboard"
-  ).textContent = `You lose! ${playerChoice} is beaten by ${computerChoice}.`;
+  ).textContent = `CPU wins! ${playerChoice} is beaten by ${computerChoice}.`;
   computerScore++;
 }
 
@@ -76,7 +76,7 @@ function PlayRound(playerChoice) {
   } else if (computerChoice === playerChoice) {
     document.getElementById(
       "scoreboard"
-    ).textContent = `That's a draw! Computer picked ${computerChoice} and you picked ${playerChoice}.`;
+    ).textContent = `Draw! CPU picked ${computerChoice} and you picked ${playerChoice}.`;
   } else {
     document.getElementById(
       "scoreboard"
