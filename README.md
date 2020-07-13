@@ -1,4 +1,4 @@
-A classic game of RPS made in association with The Odin Project. It can be be played at [GitHub Pages](https://emilravn.github.io/rockpaperscissors/).
+A classic game of RPS made in association with The Odin Project. It can be played at [GitHub Pages](https://emilravn.github.io/rockpaperscissors/).
 
 ## Rules of Rock Paper Scissors
 
